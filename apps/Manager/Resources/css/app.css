@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rdt_Table {
+  @apply !bg-red-500 !rounded-lg;
+}
+.data .rdt_TableRow {
+  @apply !bg-black !px-6
+}
+.rdt_TableRow:hover {
+  @apply !outline-transparent !border-0
+}
+.rdt_TableRow:hover .row-username {
+  @apply !text-gray-100
+}
+.rdt_TableRow:hover .row-email {
+  @apply !text-gray-400
+}
+.data {
+  @apply !border !border-theme-dark !rounded-lg
+}
+.data .rdt_TableRow:not(:last-of-type) {
+}
+.rdt_TableCol {
+
+}
+.rdt_TableCol_Sortable{}
+
+.rdt_TableCell{
+  @apply !w-full !py-4 !px-0 !border-b !border-gray-900
+}
+.rdt_TableCell:not(:last-of-type){
+  @apply !border-b !border-gray-800
+}
+
+.rdt_TableHeader{}
+.rdt_TableFooter{
+
+}
+.rdt_TableHead{}
+.rdt_TableHeadRow{}
+.rdt_TableBody{
+
+}
+.rdt_ExpanderRow {}
+
+.rdt_Pagination {
+  @apply !text-gray-300 !bg-transparent
+}
+.rdt_Pagination button:disabled {
+  @apply !fill-gray-700
+}
+
+.rdt_Pagination button {
+  @apply !fill-gray-300
+}
+

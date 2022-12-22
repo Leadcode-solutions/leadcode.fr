@@ -1,0 +1,27 @@
+.bg-theme {
+  @apply bg-white dark:bg-gray-800;
+}
+
+.bg-theme-active {
+  @apply bg-cyan-600 text-white font-medium;
+}
+
+.text-theme {
+  @apply text-gray-800 dark:text-gray-200;
+}
+
+.text-theme-active {
+  @apply text-cyan-600;
+}
+
+.border-theme {
+  @apply border-gray-200 dark:border-gray-900;
+}
+
+.divide-theme {
+  @apply divide-gray-200 dark:divide-gray-900;
+}
+
+.left-border-active {
+  @apply before:w-[0.30rem] before:h-[75%] before:transform before:-translate-y-1/2 before:top-1/2 before:bg-cyan-600 before:content-[""] before:absolute before:left-0 before:rounded-r-md;
+}

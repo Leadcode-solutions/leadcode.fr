@@ -1,0 +1,28 @@
+{
+  "entrypoints": {
+    "app": {
+      "css": [
+        "http://localhost:8080/assets/app.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/app.js"
+      ]
+    },
+    "shared": {
+      "css": [
+        "http://localhost:8080/assets/shared.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/shared.js"
+      ]
+    },
+    "manager": {
+      "css": [
+        "http://localhost:8080/assets/manager.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/manager.js"
+      ]
+    }
+  }
+}

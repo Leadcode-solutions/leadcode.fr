@@ -1,0 +1,13 @@
+
+
+h1 {
+  @apply block text-lg font-semibold text-gray-900;
+}
+
+p {
+  @apply text-gray-800;
+}
+
+img {
+  @apply w-full rounded-lg;
+}

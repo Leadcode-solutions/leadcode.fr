@@ -1,0 +1,8 @@
+{
+  "assets/app.css": "http://localhost:8080/assets/app.css",
+  "assets/app.js": "http://localhost:8080/assets/app.js",
+  "assets/shared.css": "http://localhost:8080/assets/shared.css",
+  "assets/shared.js": "http://localhost:8080/assets/shared.js",
+  "assets/manager.css": "http://localhost:8080/assets/manager.css",
+  "assets/manager.js": "http://localhost:8080/assets/manager.js"
+}

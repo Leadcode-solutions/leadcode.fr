@@ -1,0 +1,41 @@
+@layout('public::layouts/default')
+
+@section('body')
+<div class="container pt-20">
+  <button type="button" class="btn btn-primary">My button</button>
+  <button type="button" class="btn btn-secondary">My button</button>
+  <button type="button" class="btn btn-success">My button</button>
+  <button type="button" class="btn btn-danger">My button</button>
+</div>
+
+<div class="container pt-20">
+  <h1>H1</h1>
+  <h2>H2</h2>
+  <h3>H3</h3>
+  <h4>H4</h4>
+  <h5>H5</h5>
+  <h6>H6</h6>
+  <p class="text-gray-800">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <div class="grid grid-cols-3 gap-3">
+    @each(card in [0, 1, 2])
+      <a href="/" class="card col-span-1">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1550525811-e5869dd03032" alt="">
+        </div>
+        <div class="card-title">
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="card-action">
+
+        </div>
+      </a>
+    @end
+  </div>
+</div>
+@end

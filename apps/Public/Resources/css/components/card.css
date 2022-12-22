@@ -1,0 +1,27 @@
+.card {
+  @apply flex flex-col overflow-hidden rounded-lg shadow-lg pb-6 hover:shadow-2xl;
+}
+
+.card .card-image {
+  @apply flex-shrink-0;
+}
+
+.card .card-image img {
+  @apply h-48 w-full object-cover rounded-none;
+}
+
+.card .card-title {
+  @apply px-6 py-2;
+}
+
+.card .card-title > * {
+  @apply text-xl font-semibold text-gray-900;
+}
+
+.card .card-action {
+  @apply flex;
+}
+
+.card .card-body {
+  @apply px-6 mt-3 text-base text-gray-500;
+}

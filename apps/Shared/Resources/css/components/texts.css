@@ -1,0 +1,31 @@
+h1 {
+  @apply block text-4xl font-semibold text-gray-900 dark:text-gray-200;
+}
+
+h2 {
+  @apply block text-2xl font-semibold text-gray-900 dark:text-gray-200;
+}
+
+h3 {
+  @apply block text-xl font-semibold text-gray-900 dark:text-gray-200;
+}
+
+h4 {
+  @apply block text-lg font-semibold text-gray-900 dark:text-gray-200;
+}
+
+h5 {
+  @apply block text-base font-semibold text-gray-900 dark:text-gray-200;
+}
+
+h6 {
+  @apply block text-base font-semibold text-gray-900 dark:text-gray-200;
+}
+
+p {
+  @apply text-gray-800 dark:text-gray-400;
+}
+
+img {
+  @apply w-full rounded-lg;
+}

@@ -1,0 +1,35 @@
+.header {
+  padding-top: 174px;
+  height: 100vh;
+
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.header::after {
+  transition: opacity 1s .4s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url("https://www.swile.co/static/images/gradient/card-gradient.jpg");
+  background-position: center bottom 140%;
+  background-repeat: no-repeat;
+}
+
+.font-title {
+  font-size: 130px;
+  font-family: 'Heebo', sans-serif;
+  font-feature-settings: "liga" 1;
+}
+
+.subtitle {
+  background: linear-gradient(90deg,#ce55b0,#f34dac 12%,#f48e66 27%,#f0b832 38%,#b2ce37 54%,#63d7af 70%,#1cc2df 84%,#0580e6 94%,#ce55b0);
+  background-size: 1000px;
+  font-style: normal;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

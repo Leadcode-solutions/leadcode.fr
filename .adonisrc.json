@@ -1,0 +1,83 @@
+{
+  "typescript": true,
+  "commands": [
+    "./commands",
+    "@adonisjs/core/build/commands/index.js",
+    "@adonisjs/repl/build/commands",
+    "@adonisjs/lucid/build/commands",
+    "@eidellev/inertia-adonisjs/build/commands",
+    "@adonisjs/bouncer/build/commands"
+  ],
+  "exceptionHandlerNamespace": "App/Shared/Exceptions/Handler",
+  "aliases": {
+    "App": "apps",
+    "Config": "config",
+    "Database": "database",
+    "Contracts": "contracts",
+    "Domains": "domains",
+    "Services": "services"
+  },
+  "preloads": [
+    "./apps/Manager/routes",
+    "./apps/Public/routes",
+    "./start/view",
+    "./start/kernel",
+    {
+      "file": "./start/inertia",
+      "environment": [
+        "web"
+      ]
+    },
+    "./start/bouncer"
+  ],
+  "providers": [
+    "./providers/AppProvider",
+    "@adonisjs/core",
+    "@adonisjs/session",
+    "@adonisjs/view",
+    "@adonisjs/shield",
+    "@adonisjs/lucid",
+    "@adonisjs/auth",
+    "@eidellev/inertia-adonisjs",
+    "@adonisjs/attachment-lite",
+    "@adonisjs/bouncer"
+  ],
+  "metaFiles": [
+    {
+      "pattern": "public/**",
+      "reloadServer": false
+    },
+    {
+      "pattern": "apps/Web/Resources/views/**/*.edge",
+      "reloadServer": false
+    },
+    {
+      "pattern": "apps/Manager/Resources/views/**/*.edge",
+      "reloadServer": false
+    }
+  ],
+  "aceProviders": [
+    "@adonisjs/repl"
+  ],
+  "tests": {
+    "suites": [
+      {
+        "name": "functional",
+        "files": [
+          "tests/functional/**/*.spec(.ts|.js)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "name": "manager",
+        "files": [
+          "apps/Manager/Tests/**/*.spec(.ts|.js)"
+        ],
+        "timeout": 60000
+      }
+    ]
+  },
+  "testProviders": [
+    "@japa/preset-adonis/TestsProvider"
+  ]
+}
