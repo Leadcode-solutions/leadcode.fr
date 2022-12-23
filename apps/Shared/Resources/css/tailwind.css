@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+h1, h2, h3 {
+  font-feature-settings: "ss04";
+}
+
+h1 {
+  margin: 0;
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -.04em;
+}

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url('https://fonts.cdnfonts.com/css/circular-book');
+
 @import './tailwind.css';
 
 @import './components/global.css';
@@ -6,3 +8,25 @@
 @import './components/texts.css';
 @import './components/container.css';
 @import './components/card.css';
+
+@layer utilities {
+  html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-family: 'Circular Book', sans-serif;
+  }
+}
+
+[x-cloak] { display: none !important; }
+
+.reveal {
+  @apply opacity-0 transform translate-y-10 transition duration-1000;
+}
+
+.revealed {
+  @apply !opacity-100 transform !translate-y-0 !important;
+}
+
