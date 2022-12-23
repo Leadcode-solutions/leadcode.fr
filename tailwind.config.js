@@ -356,6 +356,7 @@ module.exports = {
       sans: [
         'ui-sans-serif',
         'system-ui',
+        'Inter var',
         '-apple-system',
         'BlinkMacSystemFont',
         '"Segoe UI"',
@@ -957,7 +958,7 @@ module.exports = {
     'disabled',
   ],
   plugins: [
-    require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
   ],
 }

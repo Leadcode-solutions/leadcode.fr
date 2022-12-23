@@ -3,6 +3,11 @@ import 'unpoly/unpoly-migrate'
 
 import 'unpoly/unpoly.min.css'
 
+up.fragment.config.mainTargets.push('[layout-root]')
+up.fragment.config.mainTargets.push('[layout-body]')
+up.fragment.config.mainTargets.push('[layout-main]')
+up.fragment.config.mainTargets.push('[layout-navbar]')
+
 up.transition('fade', async (oldElement, newElement, options) => {
   if (oldElement.id !== 'navbar') {
     await Promise.all([
