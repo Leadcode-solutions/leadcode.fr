@@ -47,7 +47,8 @@
       "@adonisjs/auth",
       "@eidellev/inertia-adonisjs",
       "@adonisjs/attachment-lite",
-      "@adonisjs/bouncer"
+      "@adonisjs/bouncer",
+      "@adonisjs/ally"
     ]
   }
 }
