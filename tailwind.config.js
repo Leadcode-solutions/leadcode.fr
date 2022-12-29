@@ -6,6 +6,17 @@ module.exports = {
   presets: [],
   darkMode: 'class', // or 'class'
   theme: {
+    extend: {
+      keyframes: {
+        life: {
+          "0%": { width: "100%" },
+          "100%": { width: "0%" },
+        },
+      },
+      animation: {
+        life: "life 4750ms linear forwards",
+      },
+    },
     screens: {
       sm: '640px',
       md: '768px',

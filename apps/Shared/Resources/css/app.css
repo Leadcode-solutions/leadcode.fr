@@ -30,3 +30,15 @@
   @apply !opacity-100 transform !translate-y-0 !important;
 }
 
+.tabs {
+  @apply opacity-0 transform translate-y-10 transition duration-1000 h-0;
+}
+
+.active-tab {
+  @apply !opacity-100 transform -translate-y-0 !h-auto transition duration-200 ease-in-out !important;
+}
+
+.tab-image {
+
+}
+

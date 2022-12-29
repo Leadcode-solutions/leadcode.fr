@@ -28,6 +28,10 @@ Alpine.data('reveal', () => ({
   },
 }))
 
+Alpine.data('tabs', () => ({
+  tab: 0,
+}))
+
 Alpine.plugin(teleport)
 Alpine.plugin(intersect)
 Alpine.plugin(collapse)
