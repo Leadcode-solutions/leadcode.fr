@@ -1,5 +1,5 @@
-<div class="px-6 lg:px-8 py-3  sticky top-0 z-10 text-gray-900 " x-data="navbar">
-  <div>
+<div class="sticky top-0 z-10 transition duration-200" x-data="navbar" id="navbar">
+  <div class="px-6 lg:px-8 py-3 text-gray-900">
     <nav class="flex h-9 items-center justify-between" aria-label="Global">
       <div class="flex items-center gap-6">
         <div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
@@ -28,7 +28,7 @@
         @if(auth.user)
           <div class="relative">
             <button
-              class="rounded-lg px-3 py-1.5 text-sm border font-semibold leading-6 text-gray-200 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+              class="rounded-lg px-3 py-1.5 text-sm border font-semibold leading-6 text-gray-700 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
               x-ref="button"
               x-on:click="toggle()"
               :aria-expanded="profil"

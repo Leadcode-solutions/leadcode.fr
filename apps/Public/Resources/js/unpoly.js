@@ -30,4 +30,26 @@ up.on('up:fragment:loaded', (event) => {
 })
 
 up.on('up:fragment:inserted', () => {
+
+  const navbar = document.querySelector('#navbar')
+  if (navbar) {
+    let oldScrollY = 0
+    navbar.style.transform = 'translateY(0)'
+
+    document.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        console.log("test")
+        navbar.className = 'sticky top-0 z-10 transition duration-200 bg-white'
+        if (window.scrollY > 400) {
+          if (oldScrollY >= window.scrollY) navbar.style.transform = 'translateY(0)'
+          else navbar.style.transform = 'translateY(-64px)'
+        }
+
+
+        oldScrollY = window.scrollY
+      } else {
+        navbar.className = 'sticky top-0 z-10 transition duration-200'
+      }
+    })
+  }
 })

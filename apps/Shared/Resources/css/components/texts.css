@@ -27,5 +27,5 @@ p {
 }
 
 img {
-  @apply w-full rounded-lg;
+  @apply w-full rounded-md;
 }

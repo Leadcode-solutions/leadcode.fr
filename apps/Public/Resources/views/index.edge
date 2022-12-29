@@ -1,10 +1,112 @@
 @layout('public::layouts/default')
 
+@section('news')
+  <div class=" bg-blue-600">
+    <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+      <div class="pr-16 sm:px-16 sm:text-center">
+        <p class="font-medium text-white">
+          <span class="md:hidden">New website</span>
+          <span class="hidden md:inline">Big news! Welcome to new website</span>
+          <span class="block sm:ml-2 sm:inline-block">
+          <a href="#" class="font-bold text-white underline">
+            Learn more
+            <span aria-hidden="true"> &rarr;</span>
+          </a>
+        </span>
+        </p>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-start pt-1 pr-1 sm:items-start sm:pt-1 sm:pr-2">
+        <button type="button" class="flex rounded-md p-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white">
+          <span class="sr-only">Dismiss</span>
+          <!-- Heroicon name: outline/x-mark -->
+          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+@end
+
 @section('body')
   <div class="" x-data="reveal">
     @!component('public::components/header')
-    <div>
-      hello
+    <div class="bg-white">
+      <section x-data="tabs" class="relative p-20 mx-auto overflow-hidden">
+        <div class="grid grid-cols-2 gap-4">
+          <!-- PART TEXT -->
+          <div class="flex flex-col gap-4">
+            @each((item, index) in tabs)
+            <div @click.prevent="tab = {{index}}" class="group px-6 pt-6 transition duration-200 ease-in-out hover:bg-gray-100 rounded-md ">
+              <div class="flex flex-col border-b">
+                <div class="flex items-center justify-between pb-4">
+                  <div class="flex items-center gap-4">
+                    <span class="text-blue-500">{{ item.id }}</span>
+                    <span class="text-3xl font-medium text-gray-900">{{ item.name }} {{index}}</span>
+                  </div>
+
+                  <div
+                    class="hidden group-hover:block translate-x-0 transition-transform group-hover:translate-x-1 duration-200"
+                    :class="{ 'active' : tab = {{index}}"
+                  >
+                    <svg width="16px" height="16px" viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 text-orange" aria-hidden="true" role="img">
+                      <path class="origin-center scale-x-100" d="M12 8H4"></path>
+                      <path class=" translate-x-1" d="M6.5 11.5L9.64645 8.35355C9.84171 8.15829 9.84171 7.84171 9.64645 7.64645L6.5 4.5"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  x-show="tab === {{index}}"
+                  x-transition
+                  class="tabs"
+                  :class="tab === {{index}} ? 'active-tab' : ''
+                  "
+
+                >
+                  {{ item.body }}
+                </div>
+              </div>
+
+
+            </div>
+            @end
+
+          </div>
+
+          <!-- PART IMAGE-->
+          <div class="max-h-[500px] relative overflow-hidden">
+            <div x-show="tab === 0" x-transition class="tab-image">
+              <img class="object-cover" src="https://planetscale.com/_next/image?url=%2Fimages%2Ffeatures%2Fboost-ui.jpg&w=3840&q=75" alt="">
+            </div>
+            <div x-show="tab === 1" x-transition class="tab-image">
+              <img class="object-cover" src="https://assets.website-files.com/6347244ba8d63489ba51c08e/635222981a0367dbd98b4366_saas-payments-p-1080.jpg" alt="">
+            </div>
+            <div x-show="tab === 2" x-transition class="tab-image">
+              <img class="object-cover" src="https://assets.website-files.com/6347244ba8d63489ba51c08e/63521e4b76bfe6defda0f791_payment-methods.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-50 py-20">
+        <div class="grid grid-cols-2 max-w-7xl mx-auto items-center gap-32">
+          <div class="flex flex-col gap-4 w-full">
+            <span class="text-blue-400 font-medium uppercase">Ecommerce</span>
+            <h3 class="text-4xl font-semibold text-gray-900">Create the perfect buying experience for your customers</h3>
+          </div>
+          <div>
+          <p class="text-gray-500 text-lg">
+            Launch your secure ecommerce website and start selling software, <span class="font-bold text-gray-900">subscriptions and digital</span> downloads anywhere in minutes. Utilize no-code checkout links without worrying about design, mobile optimization, or payment integrations. It really is easy-peasy.
+          </p>
+          </div>
+        </div>
+
+      </section>
+      <section class="min-h-screen grid grid-cols-2">
+        <div class="h-full w-full bg-[#00acff] p-6">
+        </div>
+        <div class="h-full w-full bg-[#ade4ff] pt-12">
+        </div>
+      </section>
     </div>
   </div>
 @end

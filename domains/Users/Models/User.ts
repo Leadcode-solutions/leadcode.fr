@@ -26,10 +26,16 @@ export default class User extends BaseModel {
   public email: string
 
   @column()
+  public provider: string
+
+  @column()
+  public providerId: string
+
+  @column()
   public hasEmailConfirmed: boolean
 
   @column({ serializeAs: null })
-  public password: string
+  public password: string | null
 
   @attachment({ preComputeUrl: true })
   public avatar: AttachmentContract
@@ -85,7 +91,9 @@ export default class User extends BaseModel {
   @beforeSave()
   public static async hashPassword (User: User) {
     if (User.$dirty.password) {
-      User.password = await Hash.make(User.password)
+      if (User.password != null) {
+        User.password = await Hash.make(User.password)
+      }
     }
   }
 
