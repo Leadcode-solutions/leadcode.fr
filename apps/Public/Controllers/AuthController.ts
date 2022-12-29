@@ -5,7 +5,7 @@ export default class AuthController {
     return view.render('public::pages/auth/login')
   }
 
-  public async loginWeb ({ auth, request, response }: HttpContextContract) {
+  public async loginWeb ({ auth, request, response,session }: HttpContextContract) {
     const email = request.input('email')
     const password = request.input('password')
 
@@ -13,7 +13,10 @@ export default class AuthController {
       await auth.use('web').attempt(email, password)
       response.redirect().toRoute('home')
     } catch {
-      return response.badRequest('Invalid credentials')
+      session.flash('errors', {
+        message: 'Mauvais identifiants'
+      })
+      response.redirect().back()
     }
   }
 
