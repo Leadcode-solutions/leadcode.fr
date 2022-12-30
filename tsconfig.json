@@ -48,7 +48,8 @@
       "@eidellev/inertia-adonisjs",
       "@adonisjs/attachment-lite",
       "@adonisjs/bouncer",
-      "@adonisjs/ally"
+      "@adonisjs/ally",
+      "@adonisjs/lucid-slugify"
     ]
   }
 }

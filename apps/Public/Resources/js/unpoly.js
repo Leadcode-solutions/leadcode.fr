@@ -45,7 +45,6 @@ up.on('up:fragment:inserted', () => {
           else navbar.style.transform = 'translateY(-64px)'
         }
 
-
         oldScrollY = window.scrollY
       } else {
         navbar.className = 'sticky top-0 z-10 transition duration-200'
