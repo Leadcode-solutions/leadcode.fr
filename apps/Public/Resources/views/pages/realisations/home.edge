@@ -1,0 +1,28 @@
+@layout('public::layouts/default')
+
+@section('body')
+  <div class="h-full" x-data="reveal">
+    <div class="max-w-7xl mx-auto mt-20">
+      <div class="w-2/3 flex flex-col gap-4">
+        <h1 class="text-6xl">Things I’ve made trying to put my dent in the universe.</h1>
+        <p>I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.</p>
+      </div>
+      <div>
+
+        <div class="grid grid-cols-3 mt-20">
+          <div class="col-span-1 reveal delay-300" x-intersect="reveal($el)">
+            <div class="group relative aspect-video bg-white transition duration-300 rounded-md">
+              <img src="https://scontent-mrs2-2.xx.fbcdn.net/v/t39.30808-6/318348127_1314369232658300_2179665138239518352_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=Ck4sEXMd6aIAX-eG63d&tn=ZzzUQ2V8jMleo7jE&_nc_ht=scontent-mrs2-2.xx&oh=00_AfA26nDdnrBNbUkAMpT8JDrdlhZjrmxRH4uVbucx6oXcPw&oe=63B302A4" class="w-full h-full object-cover" alt="">
+              <div class="opacity-0 group-hover:opacity-100 absolute inset-0 bg-blue-200 bg-opacity-90 rounded-md flex items-center justify-center transition duration-300">
+                <div class="p-5 space-y-3">
+                  <p class="duration-300 text-white text-3xl font-medium">Saphir</p>
+                  <p class="delay-100 duration-300 text-white" x-intersect="reveal($el)">Un parcours qui s'enrichit de jour en jour sur le développement de nos solutions d'applications web. Et quoi de mieux que de créer notre propre CRM afin de pouvoir mieux gérer notre activité et notre clientèle ?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+@end
