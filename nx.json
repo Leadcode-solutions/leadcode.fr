@@ -1,0 +1,49 @@
+{
+  "plugins": [
+    "@nxtensions/astro"
+  ],
+  "npmScope": "leadcode.fr",
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default"
+    ],
+    "sharedGlobals": []
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
+    },
+    "check": {
+      "inputs": [
+        "production",
+        "^production"
+      ]
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "check"
+        ],
+        "accessToken": "OGYwNWM0MzctNmUzNC00MDc0LTg2ZDAtNGMyZDVjMjVjOTM1fHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "defaultProject": "diamond"
+}
